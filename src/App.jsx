@@ -56,7 +56,8 @@ export const filterData = [
 ]
 
 const App = () => (
-  <Portfolio filters={["All", "Websites", "Flayers", "Business Cards"]} projects={filterData} />
+  <Portfolio filters={["All", "Websites", "Flayers", "Business Cards"]}
+  projects={filterData} />
 );
 
 export default App

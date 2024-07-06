@@ -6,13 +6,43 @@
   text-align: center;
 }
 
+.container  {
+  width: 80%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.tabsButton {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.tabsButton>div {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  margin-right: 10px;
+  color: rgba(0, 0, 0, .6);
+  transition: .25s ease-in-out;
+}
+
+.tabsButton .active {
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+}
+
+.tabsButton>div:nth-child(1) {
+  margin-left: 22px;
+}
+
 .imgGridItem {
   margin: 20px;
-  width: 300px;
 }
 
 .imgGrid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }

@@ -2,9 +2,9 @@
 function ProjectList({ projects }) {
     return (
             <div className="imgGrid">
-                {projects.map((project, index) => (
+                {projects.map((project, i) => (
                     <img className="imgGridItem"
-                        key={index} 
+                        key={i} 
                         src={project.img} 
                         alt={project.category} 
                     />

@@ -1,17 +1,22 @@
 
-const Toolbar = ({ filters, onSelectFilter }) => {
+const Toolbar = ({ filters, onSelectFilter, selected}) => {
+
     return (
-        <div>
-            {filters.map(filter => (
-                <button
-                    key={filter}
+        <div className="tabsButton">
+            {filters.map((filter, i) => (
+                <div     
+                    className={filter === selected ? "active" : false}
+                    key={i}
                     onClick={() => onSelectFilter(filter)}
-                >
-                {filter}
-                </button>
+                    >
+                    {filter}
+                </div>
+
             ))}
         </div>
     )
   }
+
+ 
 
 export default Toolbar;
