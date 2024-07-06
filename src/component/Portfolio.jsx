@@ -7,10 +7,9 @@ import ProjectList from './ProjectList';
 function Portfolio({projects}) {
     const [selectedFilter, setSelectedFilter] = useState('All');
 
-    const filteredProjects = 
-        selectedFilter === 'All' ? projects : projects.filter(project => project.category === selectedFilter);
+    const filteredProjects = selectedFilter === 'All' ? projects : projects.filter(project => project.category === selectedFilter);
 
-    function click(filter) {
+    function setSelect(filter) {
          setSelectedFilter(filter);
     }
 
@@ -19,7 +18,7 @@ function Portfolio({projects}) {
             <Toolbar
                 filters={["All", "Websites", "Flayers", "Business Cards"]}
                 selected={selectedFilter}
-                onSelectFilter={click}
+                onSelectFilter={setSelect}
             />   
             <ProjectList projects={filteredProjects} /> 
         </div>
